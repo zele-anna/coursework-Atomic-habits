@@ -18,8 +18,7 @@ def validate_associated_is_enjoyable(value):
 
 def validate_enjoyable_habit_no_reward(value):
     """Валидация приятной привычки - не может быть вознаграждения или связанной привычки."""
-    action = dict(value).get("action")
-    is_enjoyable = action.is_enjoyable
+    is_enjoyable = dict(value).get("is_enjoyable")
     reward = dict(value).get("reward")
     associated_habit = dict(value).get("associated_habit")
     if is_enjoyable:

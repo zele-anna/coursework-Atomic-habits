@@ -1,11 +1,6 @@
 from django.contrib import admin
 
-from habits.models import Action, Habit
-
-
-@admin.register(Action)
-class ActionAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "owner", "is_enjoyable")
+from habits.models import Habit
 
 
 @admin.register(Habit)
