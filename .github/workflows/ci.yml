@@ -20,10 +20,14 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-root
 
+      - name: Install flake8
+        run: poetry install flake8
+
       - name: Run flake8
         run: flake8 .
 
   test:
+    needs: lint
     runs-on: ubuntu-latest
     services:
       # Label used to access the service container
