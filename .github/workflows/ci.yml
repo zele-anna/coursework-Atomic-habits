@@ -79,5 +79,6 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
           cd coursework-Atomic-habits
           git pull
-          docker compose down --rmi local
-          docker compose up --build -d
+          sudo docker compose down --rmi local
+          sudo docker compose up --build -d
+          EOF
